@@ -1,0 +1,22 @@
+reset
+
+set term png size 1440,768
+set output "plot_script.png"
+
+log2(x) = log(x) / log(2)
+ShanLim(p) = 1 + p * log2(p) + (1 - p) * log2(1 - p)
+
+set title "Analysing Cascade algorithm"
+
+set xrange[0.0:15]
+set yrange[0.0:1.0]
+set grid
+set xtics 0.5
+set ytics 0.1
+set xlabel "QBER, %"
+set ylabel "Key rate"
+
+set label "LDPC" at 1.75,0.75 point pt 2 ps 1 right
+set label "LDPC" at 2.65,0.66 point pt 2 ps 1 right
+set label "LDPC" at 4.90,0.50 point pt 2 ps 1 right
+

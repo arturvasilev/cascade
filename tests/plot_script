@@ -1,0 +1,9 @@
+load "header"
+
+plot\
+ ShanLim(x/100) title "Shannon limit",\
+ "res_1000_10_0.1" using ($1 * 100):3 title "1 kbit" w l,\
+ "res_10000_10_0.1" using ($1 * 100):3 title "10 kbit" w l,\
+ "res_100000_10_0.1" using ($1 * 100):3 title "100 kbit" w l
+
+load "footer"
